@@ -15,8 +15,9 @@ uint32 mode_req_global_position
 uint32 mode_req_mission
 uint32 mode_req_offboard_signal
 uint32 mode_req_home_position
-uint32 mode_req_prevent_arming    # if set, cannot arm while in this mode
-uint32 mode_req_other             # other requirements, not covered above (for external modes)
+uint32 mode_req_prevent_arming    # if set, cannot arm while in this mode Additional
+uint32 mode_req_manual_control
+uint32 mode_req_other             # other requirements, not covered above (for external modes) Additional
 
 
 # Mode requirements
@@ -25,9 +26,9 @@ bool attitude_invalid                 # Attitude invalid
 bool local_altitude_invalid           # Local altitude invalid
 bool local_position_invalid           # Local position estimate invalid
 bool local_position_invalid_relaxed   # Local position with reduced accuracy requirements invalid (e.g. flying with optical flow)
-bool local_velocity_invalid           # Local velocity estimate invalid
+bool local_velocity_invalid           # Local velocity estimate invalid Additional
 bool global_position_invalid          # Global position estimate invalid
-bool gps_position_invalid             # GPS position invalid
+bool gps_position_invalid             # GPS position invalid Additional
 bool auto_mission_missing             # No mission available
 bool offboard_control_signal_lost     # Offboard signal lost
 bool home_position_invalid            # No home position available
